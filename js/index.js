@@ -27,7 +27,10 @@ $(function(){
             });
         }
 
-        if($(this).scrollTop()>1300){
+
+        var num2 = $("footer").offset().top-$(window).height();
+        console.log(num2);
+        if($(this).scrollTop()>num2){
             $('.backTotop').css({
                 "position":"absolute",
                 "bottom":"270px"
@@ -55,6 +58,19 @@ $(function(){
         $('html,body').animate({
             scrollTop: '0px'
         }, 400);
+    })
+
+
+    $(".changecity").click(function(){
+        $(".cityBox").css({
+            "display":"block"
+        })
+    })
+
+    $(".closeBox").click(function(){
+        $(".cityBox").css({
+            "display":"none"
+        })
     })
 
 })
